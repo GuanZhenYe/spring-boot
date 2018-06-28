@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://master:8761/eureka/,http://backup:8762/eureka/
+    registry-fetch-interval-seconds: 5
+
+server:
+  port: 8764

@@ -1,0 +1,8 @@
+server:
+  context-path: /demo
+  port: 8080
+
+custom:
+  conf:
+    redisUrl: http://localhost
+    redisPort: 6379
