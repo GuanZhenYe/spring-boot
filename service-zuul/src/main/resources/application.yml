@@ -1,0 +1,14 @@
+server:
+  port: 8766
+spring:
+  application:
+    name: service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://master:8761/eureka/,http://backup:8762/eureka/
+zuul:
+  routes:
+   api-a:
+    path: /api-a/**
+    servicdId: service-ribbon

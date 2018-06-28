@@ -19,6 +19,7 @@ public class TestController {
     @RequestMapping(value = "/test",produces = "text/plain;charset=utf-8")
     public Object test(@SessionUser SessionInfo sessionInfo){
 
+        System.out.println(customConfig.getRedisUrl()+":"+customConfig.getRedisPort());
         if(sessionInfo!=null){
 //            return sessionInfo;
             System.out.println(sessionInfo.toString());
