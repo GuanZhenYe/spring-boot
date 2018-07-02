@@ -15,7 +15,7 @@ public class RibbonController {
     @Autowired
     private RibbonService ribbonService;
 
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "/ribbon")
     public String test(@RequestParam String name) {
         return ribbonService.hiService(name);
     }

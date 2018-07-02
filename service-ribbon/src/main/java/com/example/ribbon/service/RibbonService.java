@@ -1,6 +1,8 @@
 package com.example.ribbon.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -11,6 +13,8 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class RibbonService {
 
+    private static Logger log= LoggerFactory.getLogger(RibbonService.class);
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -18,6 +22,7 @@ public class RibbonService {
     @HystrixCommand(fallbackMethod = "breaker")
     public String hiService(String name) {
 
+        log.debug("ribbon loads balancing");
         return restTemplate.getForObject("http://eureka-client/test?name="+name,String.class);
     }
 
