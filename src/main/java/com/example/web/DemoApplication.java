@@ -61,6 +61,7 @@ public class DemoApplication extends WebMvcConfigurerAdapter{
 	public void addInterceptors(InterceptorRegistry registry) {
 
 		registry.addInterceptor(new LoginInterceptor());
+
 		super.addInterceptors(registry);
 	}
 }

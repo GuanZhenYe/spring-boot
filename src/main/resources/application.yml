@@ -1,5 +1,4 @@
 server:
-  context-path: /demo
   port: 8080
 
 custom:
