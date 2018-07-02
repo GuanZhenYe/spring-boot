@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      # 服务配置中心的地址
+      uri: http://localhost:8768/
+server:
+  port: 8769
