@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-feign
+#注册到服务发现中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://master:8761/eureka/,http://back:8762/eureka/
+    registry-fetch-interval-seconds: 5
+server:
+  port: 8767
+
+#熔断器开启
+feign:
+  hystrix:
+    enabled: true
