@@ -9,6 +9,9 @@ eureka:
       defaultZone: http://master:8761/eureka/,http://backup:8762/eureka/
 zuul:
   routes:
-   api-a:
-    path: /api-a/**
-    servicdId: service-ribbon
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
