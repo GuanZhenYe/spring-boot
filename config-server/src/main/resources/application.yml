@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/GuanZhenYe/springcloud-config/
           search-paths: config
-          username:
+          username: GuanZhenYe
           password:
       label: master
 
